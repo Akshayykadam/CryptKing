@@ -22,6 +22,9 @@ struct CoinRowView: View {
             rightColumn
         }
         .font(.subheadline)
+        .background(
+            Color.theme.background.opacity(0.001)
+        )
     }
 }
 
@@ -42,8 +45,8 @@ extension CoinRowView{
                 .font(.caption)
                 .foregroundStyle(Color.theme.secondaryText)
                 .frame(minWidth: 30)
-            Circle()
-//            CoinImageView(coin: coin)
+//            Circle()
+            CoinImageView(coin: coin)
                 .frame(width: 30, height: 30)
             Text(coin.symbol.uppercased())
                 .font(.headline)
