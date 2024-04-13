@@ -29,7 +29,7 @@ struct PortfolioView: View {
             .navigationTitle("Manage Portfolio")
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    CloseButton()
+                    //CloseButton()
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {

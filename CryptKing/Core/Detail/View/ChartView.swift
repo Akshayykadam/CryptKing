@@ -38,11 +38,15 @@ struct ChartView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                     .padding(.horizontal, 4)
                 }
-//            HStack{
-//                Text(startDate.asShortDateString())
-//                Spacer()
-//                Text(endDate.asShortDateString())
-//            }
+            HStack{
+                Text(startDate.asShortDateString())
+                    .font(.caption2)
+                Spacer()
+                Text(endDate.asShortDateString())
+                    .font(.caption2)
+            }
+            .padding(.vertical)
+            .padding(.horizontal, 4)
         }
         .font(.caption)
         .foregroundStyle(Color.theme.secondaryText)
@@ -100,12 +104,12 @@ extension ChartView{
     
     private var chartYAxis: some View{
         VStack{
-            Text(maxY.formattedWithAbbreviations())
+            Text(maxY.asCurrencyWith2Decimals())
             Spacer()
             let price = (maxY + minY) / 2
-            Text(price.formattedWithAbbreviations())
+            Text(price.asCurrencyWith2Decimals())
             Spacer()
-            Text(minY.formattedWithAbbreviations())
+            Text(minY.asCurrencyWith2Decimals())
         }
     }
 }

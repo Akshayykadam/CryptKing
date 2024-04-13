@@ -75,7 +75,7 @@ struct DetailView: View {
 extension DetailView{
     
     private var overviewTitle: some View{
-        Text("Overview")
+        Text("Overview Report")
             .font(.title)
             .bold()
             .foregroundStyle(Color.theme.accent)
@@ -83,7 +83,7 @@ extension DetailView{
     }
     
     private var additionalTitle: some View{
-        Text("Additional Details")
+        Text("More Insights")
             .font(.title)
             .bold()
             .foregroundStyle(Color.theme.accent)
